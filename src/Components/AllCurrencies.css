@@ -1,0 +1,98 @@
+.logo-name,
+.currency-list,
+.currency-symbol,
+.currency-rate {
+  color: white;
+}
+
+.AllCurrencies {
+  background-color: rgb(32, 32, 97);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo-image-and-name {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+}
+
+.currency-list {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 50px; */
+}
+
+.search-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-bar {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.currency-link-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.currency-link {
+  color: black;
+  text-decoration: none;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.currency-link:nth-child(odd) {
+  background-color: rgb(60, 60, 211);
+}
+
+.currency-link:nth-child(even) {
+  background-color: rgb(10, 10, 211);
+}
+
+.currency-symbol {
+  font-weight: 700;
+}
+
+.no-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-items {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
