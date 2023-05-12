@@ -14,7 +14,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Video Presentation](#live-demo)
+  - [🚀 Live Demo](#live-demo)
+  - [🚀 Video Presentation](#video-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -64,7 +65,11 @@ Allows users to
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Video Presentation <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
+
+ [ForEx Rate](https://forexrates.netlify.app/)
+
+ ## 🚀 Video Presentation <a name="video-presentation"></a>
 
 - To check out a short video presentation about the project, [click here]().
 

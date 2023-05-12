@@ -61,6 +61,6 @@
 .amount::-webkit-inner-spin-button,
 .converted::-webkit-outer-spin-button,
 .converted::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
