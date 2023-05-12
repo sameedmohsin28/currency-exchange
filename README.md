@@ -71,7 +71,7 @@ Allows users to
 
  ## 🚀 Video Presentation <a name="video-presentation"></a>
 
-- To check out a short video presentation about the project, [click here]().
+- To check out a short video presentation about the project, [click here](https://www.loom.com/share/940a273e28334540ae46ce5bd2576190).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
