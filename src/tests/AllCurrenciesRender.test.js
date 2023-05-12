@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import store from '../Redux/store';
+import store from '../Redux/store.js';
 
 import AllCurrencies from '../Components/AllCurrencies';
 
