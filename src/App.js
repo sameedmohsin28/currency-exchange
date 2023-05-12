@@ -15,7 +15,6 @@ function App() {
     <Routes>
       <Route path="/" element={<AllCurrencies />} />
       <Route path="/converter" element={<Converter />} />
-      {/* <Route path="/currencyList" element={} /> */}
     </Routes>
   );
 }

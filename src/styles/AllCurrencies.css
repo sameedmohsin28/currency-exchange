@@ -92,6 +92,16 @@
   align-items: center;
 }
 
+.isLoading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.isLoading-message {
+  color: white;
+}
+
 .no-items {
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import './Converter.css';
+import '../styles/Converter.css';
 import logo from '../assets/logo.jpg';
 
 const Converter = () => {
@@ -34,9 +34,6 @@ const Converter = () => {
             <h1 className="logo-name">ForEx Rates</h1>
           </Link>
           <div>
-            <Link to="/currencyList" className="currency-list">
-              CURRENCIES LIST
-            </Link>
             <Link to="/" className="back-button">
               Back
             </Link>

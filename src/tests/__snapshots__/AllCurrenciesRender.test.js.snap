@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllCurencies rendering Validation AllCurencies should render with / url 1`] = `
+<div
+  className="AllCurrencies"
+>
+  <header
+    className="header"
+  >
+    <a
+      className="logo-image-and-name"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="logo"
+        className="logo-image"
+        src="logo.jpg"
+      />
+      <h1
+        className="logo-name"
+      >
+        ForEx Rates
+      </h1>
+    </a>
+  </header>
+  <section
+    className="content-section"
+  >
+    <div
+      className="search-div"
+    >
+      <input
+        className="search-bar"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+    </div>
+    <div
+      className="currency-link-div"
+    />
+  </section>
+</div>
+`;

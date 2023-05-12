@@ -3,7 +3,6 @@ import fetchExchangeRates from '../api';
 
 const initialCurrencyState = {
   currencyArray: [],
-  currencyDeatils: [],
   isLoading: false,
   error: null,
 };
@@ -13,6 +12,11 @@ const currencySlice = createSlice({
   initialState: initialCurrencyState,
   extraReducers(builder) {
     builder
+      .addCase(fetchExchangeRates.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+
       .addCase(fetchExchangeRates.fulfilled, (state, action) => ({
         ...state,
         isLoading: false,
