@@ -14,6 +14,7 @@ const Converter = () => {
 
   const { isLoadingTimeSeriesArray } = useSelector((store) => (store));
   const { timeSeriesArray } = useSelector((store) => (store));
+  const reversedTimeSeriesArray = [...timeSeriesArray].reverse();
 
   useEffect(() => {
     dispatch(fetchPreviousRates(timeSeries, symbol));
@@ -132,7 +133,7 @@ const Converter = () => {
             <h4 className="past-data-message">Conversion rates from past 10 days</h4>
           </div>
           <div className="past-data-div">
-            {timeSeriesArray.map((pastRate) => (
+            {reversedTimeSeriesArray.map((pastRate) => (
               <div key={pastRate.date} className="each-past-data">
                 <p className="pastRate-date">{pastRate.date}</p>
                 <p className="pastRate-rate">{pastRate.rateAmount}</p>
