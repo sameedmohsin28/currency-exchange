@@ -15,7 +15,7 @@ exports[`AllCurencies rendering Validation AllCurencies should render with / url
       <img
         alt="logo"
         className="logo-image"
-        src="logo.jpg"
+        src="logoForWhite.png"
       />
       <h1
         className="logo-name"
