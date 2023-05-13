@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/AllCurrencies.css';
 
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logoForWhite.png';
+import rightArrow from '../assets/rightArrow.png';
 
 const AllCurrencies = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -75,6 +76,7 @@ const AllCurrencies = () => {
           <div className="currency-link-div">
             {searchedArray.map((eachRate) => (
               <Link to="/converter" key={eachRate.symbol} state={{ rate: eachRate.rate, symbol: eachRate.symbol }} className="currency-link">
+                <img src={rightArrow} alt="" className="right-arrow" />
                 <div className="currency-symbol">
                   {eachRate.symbol}
                 </div>

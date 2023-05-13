@@ -6,7 +6,7 @@
 }
 
 .AllCurrencies {
-  background-color: rgb(32, 32, 97);
+  background-color: #ec4c8b;
   min-height: 100vh;
 }
 
@@ -53,6 +53,7 @@
 .search-bar {
   height: 30px;
   padding-left: 10px;
+  border: none;
 }
 
 .search-bar:focus {
@@ -61,7 +62,8 @@
 
 .currency-link-div {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: #cf4278;
 }
 
 .currency-link {
@@ -73,14 +75,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
-.currency-link:nth-child(odd) {
-  background-color: rgb(60, 60, 211);
+.currency-link:nth-child(4n+1),
+.currency-link:nth-child(4n+4) {
+  background-color: #db4681;
 }
 
-.currency-link:nth-child(even) {
-  background-color: rgb(10, 10, 211);
+.right-arrow {
+  align-self: flex-end;
 }
 
 .currency-symbol {

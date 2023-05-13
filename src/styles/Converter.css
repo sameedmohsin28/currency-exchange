@@ -1,5 +1,5 @@
 .Converter {
-  background-color: rgb(32, 32, 97);
+  background-color: #ec4c8b;
   min-height: 100vh;
 }
 
@@ -41,7 +41,7 @@
   height: 30px;
   width: 220px;
   border: 5px solid white;
-  background-color: rgb(47, 41, 53);
+  background-color: #aa0547;
   color: white;
   padding: 10px;
 }
