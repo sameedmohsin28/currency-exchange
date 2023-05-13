@@ -11,6 +11,7 @@ const Converter = () => {
   const { rate } = location.state;
   const { symbol } = location.state;
   const { timeSeries } = location.state;
+  const { days } = location.state;
 
   const { isLoadingTimeSeriesArray } = useSelector((store) => (store));
   const { timeSeriesArray } = useSelector((store) => (store));
@@ -80,7 +81,11 @@ const Converter = () => {
               </div>
             </div>
             <div className="isLoading-state">
-              <h3 className="isLoading-message">Fetching rates from past 10 days...</h3>
+              <h3 className="isLoading-message">
+                {'Fetching rates from past '}
+                {days}
+                {' days...'}
+              </h3>
             </div>
           </section>
         </div>
@@ -130,7 +135,11 @@ const Converter = () => {
             </div>
           </div>
           <div className="past-data-mesaage-div">
-            <h4 className="past-data-message">Conversion rates from past 10 days</h4>
+            <h4 className="past-data-message">
+              {'Conversion rates from past '}
+              {days}
+              {' days'}
+            </h4>
           </div>
           <div className="past-data-div">
             {reversedTimeSeriesArray.map((pastRate) => (
