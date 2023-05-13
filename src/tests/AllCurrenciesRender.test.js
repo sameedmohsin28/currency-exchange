@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // eslint-disable-next-line import/extensions
-import store from '../Redux/store';
+import store from '../redux/store';
 
 import AllCurrencies from '../Components/AllCurrencies';
 
