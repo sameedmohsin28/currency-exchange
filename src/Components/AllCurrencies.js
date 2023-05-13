@@ -15,11 +15,24 @@ const AllCurrencies = () => {
 
   const usd = useSelector((store) => (store.currencyArray));
 
-  const { isLoading } = useSelector((store) => (store));
+  const { isLoadingCurrencyArray } = useSelector((store) => (store));
 
   const searchedArray = usd.filter((ifSearched) => ifSearched.symbol.includes(searchQuery));
 
-  if (isLoading) {
+  const date = new Date();
+  const yesterdayCalc = date - 1000 * 60 * 60 * 24 * 1;
+  const yesterday = new Date(yesterdayCalc);
+  const yesterdayMonth = `0${yesterday.getMonth() + 1}`.slice(-2);
+  const yesterdayDate = `0${yesterday.getDate() + 1}`.slice(-2);
+  const yesterdayWholeDate = `${yesterday.getFullYear()}-${yesterdayMonth}-${yesterdayDate}`;
+  const tenDaysCalc = date - 1000 * 60 * 60 * 24 * 10;
+  const tenDays = new Date(tenDaysCalc);
+  const tenDaysMonth = `0${tenDays.getMonth() + 1}`.slice(-2);
+  const tenDaysDate = `0${tenDays.getDate() + 1}`.slice(-2);
+  const tenDaysWholeDate = `${tenDays.getFullYear()}-${tenDaysMonth}-${tenDaysDate}`;
+  const prevDate = `&start_date=${tenDaysWholeDate}&end_date=${yesterdayWholeDate}`;
+
+  if (isLoadingCurrencyArray) {
     return (
       <>
         <div className="AllCurrencies">
@@ -75,7 +88,7 @@ const AllCurrencies = () => {
           </div>
           <div className="currency-link-div">
             {searchedArray.map((eachRate) => (
-              <Link to="/converter" key={eachRate.symbol} state={{ rate: eachRate.rate, symbol: eachRate.symbol }} className="currency-link">
+              <Link to="/converter" key={eachRate.symbol} state={{ rate: eachRate.rate, symbol: eachRate.symbol, timeSeries: `${prevDate}&symbols=${eachRate.symbol}` }} className="currency-link">
                 <img src={rightArrow} alt="" className="right-arrow" />
                 <div className="currency-symbol">
                   {eachRate.symbol}

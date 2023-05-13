@@ -1,5 +1,5 @@
 .Converter {
-  background-color: #ec4c8b;
+  background-color: #f578aa;
   min-height: 100vh;
 }
 
@@ -8,26 +8,37 @@
   text-decoration: none;
 }
 
-.converter-section {
+.details-section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+}
+
+.converter-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #f7307c;
+  width: 100%;
+  padding: 40px 0;
 }
 
 .exchange-rate-text {
   margin: 0;
   color: white;
+  text-align: center;
 }
 
 .base-to-specific,
 .specific-to-base {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 
 .base-to-specific-heading,
@@ -38,9 +49,10 @@
 
 .amount,
 .converted {
-  height: 30px;
-  width: 220px;
-  border: 5px solid white;
+  height: 20px;
+  width: 24%;
+  max-width: 180px;
+  border: 2px solid white;
   background-color: #aa0547;
   color: white;
   padding: 10px;
@@ -63,4 +75,41 @@
 .amount:focus,
 .converted:focus {
   outline: 0;
+}
+
+.past-data-message {
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  font-style: italic;
+}
+
+.past-data-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.each-past-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.each-past-data:nth-child(odd) {
+  background-color: #ea4a89;
+}
+
+.each-past-data:nth-child(even) {
+  background-color: #d04379;
+}
+
+.pastRate-date,
+.pastRate-rate {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }

@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import fetchExchangeRates from '../api';
+import { fetchExchangeRates, fetchPreviousRates } from '../api';
 
 const initialCurrencyState = {
   currencyArray: [],
-  isLoading: false,
+  timeSeriesArray: [],
+  isLoadingCurrencyArray: false,
+  isLoadingTimeSeriesArray: false,
   error: null,
 };
 
@@ -14,13 +16,22 @@ const currencySlice = createSlice({
     builder
       .addCase(fetchExchangeRates.pending, (state) => ({
         ...state,
-        isLoading: true,
+        isLoadingCurrencyArray: true,
       }))
-
       .addCase(fetchExchangeRates.fulfilled, (state, action) => ({
         ...state,
-        isLoading: false,
+        isLoadingCurrencyArray: false,
         currencyArray: action.payload,
+      }))
+
+      .addCase(fetchPreviousRates.pending, (state) => ({
+        ...state,
+        isLoadingTimeSeriesArray: true,
+      }))
+      .addCase(fetchPreviousRates.fulfilled, (state, action) => ({
+        ...state,
+        isLoadingTimeSeriesArray: false,
+        timeSeriesArray: action.payload,
       }));
   },
 });
