@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import '../styles/Converter.css';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logoForWhite.png';
 
 const Converter = () => {
   const location = useLocation();
