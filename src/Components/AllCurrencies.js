@@ -25,12 +25,13 @@ const AllCurrencies = () => {
   const yesterdayMonth = `0${yesterday.getMonth() + 1}`.slice(-2);
   const yesterdayDate = `0${yesterday.getDate() + 1}`.slice(-2);
   const yesterdayWholeDate = `${yesterday.getFullYear()}-${yesterdayMonth}-${yesterdayDate}`;
-  const tenDaysCalc = date - 1000 * 60 * 60 * 24 * 10;
-  const tenDays = new Date(tenDaysCalc);
-  const tenDaysMonth = `0${tenDays.getMonth() + 1}`.slice(-2);
-  const tenDaysDate = `0${tenDays.getDate() + 1}`.slice(-2);
-  const tenDaysWholeDate = `${tenDays.getFullYear()}-${tenDaysMonth}-${tenDaysDate}`;
-  const prevDate = `&start_date=${tenDaysWholeDate}&end_date=${yesterdayWholeDate}`;
+  const numberOfDays = 10;
+  const multipleDaysCalc = date - 1000 * 60 * 60 * 24 * numberOfDays;
+  const multipleDays = new Date(multipleDaysCalc);
+  const multipleDaysMonth = `0${multipleDays.getMonth() + 1}`.slice(-2);
+  const multipleDaysDate = `0${multipleDays.getDate() + 1}`.slice(-2);
+  const multipleDaysWholeDate = `${multipleDays.getFullYear()}-${multipleDaysMonth}-${multipleDaysDate}`;
+  const prevDate = `&start_date=${multipleDaysWholeDate}&end_date=${yesterdayWholeDate}`;
 
   if (isLoadingCurrencyArray) {
     return (
@@ -88,7 +89,17 @@ const AllCurrencies = () => {
           </div>
           <div className="currency-link-div">
             {searchedArray.map((eachRate) => (
-              <Link to="/converter" key={eachRate.symbol} state={{ rate: eachRate.rate, symbol: eachRate.symbol, timeSeries: `${prevDate}&symbols=${eachRate.symbol}` }} className="currency-link">
+              <Link
+                to="/converter"
+                key={eachRate.symbol}
+                state={{
+                  rate: eachRate.rate,
+                  symbol: eachRate.symbol,
+                  timeSeries: `${prevDate}&symbols=${eachRate.symbol}`,
+                  days: numberOfDays,
+                }}
+                className="currency-link"
+              >
                 <img src={rightArrow} alt="" className="right-arrow" />
                 <div className="currency-symbol">
                   {eachRate.symbol}
