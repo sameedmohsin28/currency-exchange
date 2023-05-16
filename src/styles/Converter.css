@@ -22,11 +22,18 @@
   align-items: center;
   background-color: #f7307c;
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 2%;
+  border-radius: 30px;
 }
 
 .exchange-rate-text {
   margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.exchange-currency-acronym {
+  margin-top: 0;
   color: white;
   text-align: center;
 }
@@ -45,6 +52,7 @@
 .specific-to-base-heading {
   margin: 0;
   color: white;
+  text-align: center;
 }
 
 .amount,

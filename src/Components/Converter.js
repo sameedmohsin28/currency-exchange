@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import '../styles/Converter.css';
-import logo from '../assets/logoForWhite.png';
 import { fetchPreviousRates } from '../redux/api';
+import currencyAcronyms from '../data/currencyAcronyms';
+import '../styles/Converter.css';
+import logo from '../assets/logo.png';
+import loadingGif from '../assets/loadingConverter.gif';
 
 const Converter = () => {
   const dispatch = useDispatch();
   const location = useLocation();
+
   const { rate } = location.state;
   const { symbol } = location.state;
   const { timeSeries } = location.state;
   const { days } = location.state;
+
+  const symbolLowerCase = symbol.toLowerCase();
 
   const { isLoadingTimeSeriesArray } = useSelector((store) => (store));
   const { timeSeriesArray } = useSelector((store) => (store));
@@ -56,6 +61,9 @@ const Converter = () => {
           <section className="details-section">
             <div className="converter-div">
               <div className="exchange-rate">
+                <h2 className="exchange-currency-acronym">
+                  {currencyAcronyms[symbolLowerCase]}
+                </h2>
                 <h2 className="exchange-rate-text">
                   {'1 USD = '}
                   {rate}
@@ -86,6 +94,7 @@ const Converter = () => {
                 {days}
                 {' days...'}
               </h3>
+              <img src={loadingGif} alt="loading" />
             </div>
           </section>
         </div>
@@ -110,6 +119,9 @@ const Converter = () => {
         <section className="details-section">
           <div className="converter-div">
             <div className="exchange-rate">
+              <h2 className="exchange-currency-acronym">
+                {currencyAcronyms[symbolLowerCase]}
+              </h2>
               <h2 className="exchange-rate-text">
                 {'1 USD = '}
                 {rate}
