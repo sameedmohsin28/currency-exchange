@@ -3,8 +3,8 @@ import axios from 'axios';
 
 // const currencyCode = 'USD';
 
-export const fetchExchangeRates = createAsyncThunk('currency/fetchExchangeRates', async () => { // code = currencyCode
-  const API_URL = 'https://api.exchangerate.host/latest?base=USD';
+export const fetchExchangeRates = createAsyncThunk('currency/fetchExchangeRates', async (code = 'USD') => {
+  const API_URL = `https://api.exchangerate.host/latest?base=${code}`;
   const response = await axios.get(API_URL);
   const rateResponse = response.data.rates;
   const usdRates = Object.keys(rateResponse).map((eachRate) => (
