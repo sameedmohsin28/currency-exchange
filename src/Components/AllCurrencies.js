@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/AllCurrencies.css';
 
-import logo from '../assets/logoForWhite.png';
+import logo from '../assets/logo.png';
 import rightArrow from '../assets/rightArrow.png';
+import loadingGif from '../assets/loadingAllCurrencies.gif';
 
 const AllCurrencies = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,6 +46,7 @@ const AllCurrencies = () => {
           </header>
           <section className="isLoading-state">
             <h3 className="isLoading-message">Loading latest conversion rates...</h3>
+            <img src={loadingGif} alt="loading" />
           </section>
         </div>
       </>
